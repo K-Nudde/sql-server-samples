@@ -10,7 +10,7 @@ pool:
   vmImage: windows-2019
 
 variables:
-  BuildC onfiguration: 'Release'
+  BuildConfiguration: 'Release'
 
 # Here come the actual "build steps". In this case, we have a "simple" build pipeline - we will look at pipelines with multiple "stages" later.
 steps:
@@ -31,6 +31,6 @@ steps:
 # The Artifact is the result of this pipeline. By publishing it, a deployment pipeline can pick it up for deployment to other environments.
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.Artifac  tStagingDirectory)'
-    artifact: 'SQLDWXX'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'SQLDW'
     publishLocation: 'pipeline'
