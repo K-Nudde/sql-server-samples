@@ -2,7 +2,7 @@
 
 # The *trigger* specifies what triggers this pipeline to run automatically. In this case: a *commit* against *master*
 trigger:
-- masters
+- master
 
 # The *pool* specifies which VM image to use for executing this pipeline.
 pool:
@@ -10,7 +10,7 @@ pool:
   vmImage: windows-2019
 
 variables:
-  BuildConfiguration: 'Release'
+  BuildC onfiguration: 'Release'
 
 # Here come the actual "build steps". In this case, we have a "simple" build pipeline - we will look at pipelines with multiple "stages" later.
 steps:
@@ -31,6 +31,6 @@ steps:
 # The Artifact is the result of this pipeline. By publishing it, a deployment pipeline can pick it up for deployment to other environments.
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: 'SQLDW'
+    targetPath: '$(Build.Artifac  tStagingDirectory)'
+    artifact: 'SQLDWXX'
     publishLocation: 'pipeline'
